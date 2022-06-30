@@ -1,19 +1,25 @@
 {
-  "com.sap::STRAVELAG": {
+  "SYRAVELAG": {
     "target": {
       "object": "STRAVELAG",
       "schema": "SFLIGHT"
     }
   },
-  "com.sap::SBOOK": {
+  "SAPLANE": {
     "target": {
-      "object": "SBOOK",
+      "object": "SAPLANE",
       "schema": "SFLIGHT"
     }
   },
-  "com.sap::SCPLANE": {
+  "SCPLANE": {
     "target": {
       "object": "SCPLANE",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SBOOK": {
+    "target": {
+      "object": "SBOOK",
       "schema": "SFLIGHT"
     }
   }

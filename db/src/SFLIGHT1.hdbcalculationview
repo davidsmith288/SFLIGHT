@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="SFLIGHT1" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="SFLIGHT1" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
 <descriptions defaultDescription="SFLIGHT1"/>
 <localVariables/>
 <variableMappings/>
@@ -8,62 +8,87 @@
     <resourceUri>com.sap::SAPLANE</resourceUri>
   </DataSource>
 </dataSources>
-<calculationViews>
-  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
-    <viewAttributes>
-      <viewAttribute id="MANDT"/>
-      <viewAttribute id="PLANETYPE"/>
-      <viewAttribute id="SEATSMAX"/>
-      <viewAttribute id="CONSUM"/>
-      <viewAttribute id="CON_UNIT"/>
-      <viewAttribute id="TANKCAP"/>
-      <viewAttribute id="CAP_UNIT"/>
-      <viewAttribute id="WEIGHT"/>
-      <viewAttribute id="WEI_UNIT"/>
-      <viewAttribute id="SPAN"/>
-      <viewAttribute id="SPAN_UNIT"/>
-      <viewAttribute id="LENG"/>
-      <viewAttribute id="LENG_UNIT"/>
-      <viewAttribute id="OP_SPEED"/>
-      <viewAttribute id="SPEED_UNIT"/>
-      <viewAttribute id="PRODUCER"/>
-      <viewAttribute id="SEATSMAX_B"/>
-      <viewAttribute id="SEATSMAX_F"/>
-    </viewAttributes>
-    <calculatedViewAttributes/>
-    <input node="com.sap::SAPLANE"/>
-  </calculationView>
-</calculationViews>
+<calculationViews/>
 
-<logicalModel id="Projection_1">
+<logicalModel id="com.sap::SAPLANE">
   <attributes>
     <attribute id="MANDT" order="1" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MANDT"/>
-      <keyMapping columnObjectName="Projection_1" columnName="MANDT"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="MANDT"/>
     </attribute>
     <attribute id="PLANETYPE" order="2" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="PLANETYPE"/>
-      <keyMapping columnObjectName="Projection_1" columnName="PLANETYPE"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="PLANETYPE"/>
+    </attribute>
+    <attribute id="SEATSMAX" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SEATSMAX"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="SEATSMAX"/>
+    </attribute>
+    <attribute id="CONSUM" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CONSUM"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="CONSUM"/>
+    </attribute>
+    <attribute id="CON_UNIT" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CON_UNIT"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="CON_UNIT"/>
+    </attribute>
+    <attribute id="TANKCAP" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TANKCAP"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="TANKCAP"/>
+    </attribute>
+    <attribute id="CAP_UNIT" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CAP_UNIT"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="CAP_UNIT"/>
+    </attribute>
+    <attribute id="WEIGHT" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WEIGHT"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="WEIGHT"/>
+    </attribute>
+    <attribute id="WEI_UNIT" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WEI_UNIT"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="WEI_UNIT"/>
+    </attribute>
+    <attribute id="SPAN" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPAN"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="SPAN"/>
+    </attribute>
+    <attribute id="SPAN_UNIT" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPAN_UNIT"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="SPAN_UNIT"/>
+    </attribute>
+    <attribute id="LENG" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LENG"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="LENG"/>
+    </attribute>
+    <attribute id="LENG_UNIT" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LENG_UNIT"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="LENG_UNIT"/>
+    </attribute>
+    <attribute id="OP_SPEED" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OP_SPEED"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="OP_SPEED"/>
+    </attribute>
+    <attribute id="SPEED_UNIT" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPEED_UNIT"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="SPEED_UNIT"/>
+    </attribute>
+    <attribute id="PRODUCER" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCER"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="PRODUCER"/>
+    </attribute>
+    <attribute id="SEATSMAX_B" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SEATSMAX_B"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="SEATSMAX_B"/>
+    </attribute>
+    <attribute id="SEATSMAX_F" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SEATSMAX_F"/>
+      <keyMapping columnObjectName="SAPLANE" columnName="SEATSMAX_F"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
-  <baseMeasures>
-    <measure id="SEATSMAX" order="3" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="SEATSMAX"/>
-      <measureMapping columnObjectName="Projection_1" columnName="SEATSMAX"/>
-    </measure>
-    <measure id="TANKCAP" order="4" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="TANKCAP"/>
-      <measureMapping columnObjectName="Projection_1" columnName="TANKCAP"/>
-    </measure>
-    <measure id="WEIGHT" order="5" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="WEIGHT"/>
-      <measureMapping columnObjectName="Projection_1" columnName="WEIGHT"/>
-    </measure>
-  </baseMeasures>
+  <baseMeasures/>
   <calculatedMeasures/>
   <restrictedMeasures/>
-  <localDimensions/>
 </logicalModel>
 <layout>
   <shapes>
@@ -71,11 +96,6 @@
       <upperLeftCorner x="40" y="85"/>
     </shape>
     
-  
-    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="100" y="233"/>
-      <rectangleSize height="30" width="160"/>
-    </shape>
   </shapes>
 </layout>
 </Calculation:scenario>
