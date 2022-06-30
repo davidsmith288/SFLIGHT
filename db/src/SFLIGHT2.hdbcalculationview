@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="SFLIGHT2" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="SFLIGHT2"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::SCPLANE">
+    <resourceUri>com.sap::SCPLANE</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+
+<logicalModel id="com.sap::SCPLANE">
+  <attributes>
+    <attribute id="MANDT" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MANDT"/>
+      <keyMapping columnObjectName="SCPLANE" columnName="MANDT"/>
+    </attribute>
+    <attribute id="PLANETYPE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PLANETYPE"/>
+      <keyMapping columnObjectName="SCPLANE" columnName="PLANETYPE"/>
+    </attribute>
+    <attribute id="CARGOMAX" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CARGOMAX"/>
+      <keyMapping columnObjectName="SCPLANE" columnName="CARGOMAX"/>
+    </attribute>
+    <attribute id="CAR_UNIT" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CAR_UNIT"/>
+      <keyMapping columnObjectName="SCPLANE" columnName="CAR_UNIT"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

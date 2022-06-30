@@ -1,13 +1,7 @@
 {
-  "com.sap::STRAVELAG": {
+  "com.sap::SAPLANE": {
     "target": {
-      "object": "STRAVELAG",
-      "schema": "SFLIGHT"
-    }
-  },
-  "com.sap::SBOOK": {
-    "target": {
-      "object": "SBOOK",
+      "object": "SAPLANE",
       "schema": "SFLIGHT"
     }
   },

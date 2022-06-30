@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="SFLIGHT1" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="SFLIGHT1"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::SAPLANE">
+    <resourceUri>com.sap::SAPLANE</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="MANDT"/>
+      <viewAttribute id="PLANETYPE"/>
+      <viewAttribute id="SEATSMAX"/>
+      <viewAttribute id="CONSUM"/>
+      <viewAttribute id="CON_UNIT"/>
+      <viewAttribute id="TANKCAP"/>
+      <viewAttribute id="CAP_UNIT"/>
+      <viewAttribute id="WEIGHT"/>
+      <viewAttribute id="WEI_UNIT"/>
+      <viewAttribute id="SPAN"/>
+      <viewAttribute id="SPAN_UNIT"/>
+      <viewAttribute id="LENG"/>
+      <viewAttribute id="LENG_UNIT"/>
+      <viewAttribute id="OP_SPEED"/>
+      <viewAttribute id="SPEED_UNIT"/>
+      <viewAttribute id="PRODUCER"/>
+      <viewAttribute id="SEATSMAX_B"/>
+      <viewAttribute id="SEATSMAX_F"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="com.sap::SAPLANE"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="MANDT" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MANDT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="MANDT"/>
+    </attribute>
+    <attribute id="PLANETYPE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PLANETYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PLANETYPE"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="SEATSMAX" order="3" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SEATSMAX"/>
+      <measureMapping columnObjectName="Projection_1" columnName="SEATSMAX"/>
+    </measure>
+    <measure id="TANKCAP" order="4" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="TANKCAP"/>
+      <measureMapping columnObjectName="Projection_1" columnName="TANKCAP"/>
+    </measure>
+    <measure id="WEIGHT" order="5" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="WEIGHT"/>
+      <measureMapping columnObjectName="Projection_1" columnName="WEIGHT"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="233"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
